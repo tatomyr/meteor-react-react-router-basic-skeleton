@@ -15,7 +15,7 @@ Meteor.startup( () => {
         <IndexRoute component={ HomePage } />
         <Route path="products" component={ Products } />
 
-        <Route path="*" component={ NotFound }/>
+        <Route path="*" component={ NotFound } />
       </Route>
     </Router>,
     document.getElementById( 'react-root' )
