@@ -7,13 +7,14 @@ export class LoginForm extends React.Component {
   login(event) {
     event.preventDefault();
 
-    console.log(this.refs);
+    console.log('log in', this.refs.email.value, this.refs.username.value, this.refs.password.value);
+
   }
 
   signup(event) {
     event.preventDefault();
 
-    console.log(this.refs);
+    console.log('sign up', this.refs.email.value, this.refs.username.value, this.refs.password.value);
 
     Accounts.createUser({
       email: this.refs.email.value,

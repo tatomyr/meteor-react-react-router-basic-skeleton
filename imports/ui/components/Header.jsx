@@ -29,7 +29,8 @@ export class Header extends React.Component {
   }*/
 
   render() {
-    const username = 'dfg'; //Meteor.user().username;
+    const username = Meteor.user() && Meteor.user().username;
+    console.log(username);
 
     return (
       <header className="header" id="header" role="banner">
