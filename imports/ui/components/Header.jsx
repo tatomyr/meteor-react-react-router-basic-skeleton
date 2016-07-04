@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import { Link } from 'react-router';
 
 import { LoginForm } from './LoginForm.jsx';
@@ -37,7 +38,9 @@ export class Header extends React.Component {
 
         [HEADER]
         <Link to="/">(home)</Link>
-        <Link to="/products">(products)</Link>
+        <Link to="/products-list">(products list)</Link>
+        <Link to="/about">(about)</Link>
+        <Link to="/contacts">(contacts)</Link>
 
         {/*Modal Trigger*/}
         { username ?

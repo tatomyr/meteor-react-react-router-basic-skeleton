@@ -4,10 +4,15 @@ import { Meteor } from 'meteor/meteor';
 
 import { Header } from './components/Header.jsx';
 
+import { createContainer } from 'meteor/react-meteor-data';
+
 
 //import { sendContacts } from '../../api/events';
 
-export class MainLayout extends React.Component {
+class MainLayout extends React.Component {
+  /*constructor(props) {
+    super(props);
+  }*/
 
   render() {
     return (
@@ -21,3 +26,13 @@ export class MainLayout extends React.Component {
 
 //export default createContainer(() => {
 //}, HomePage);
+export default createContainer(() => {
+
+
+  Meteor.subscribe('products');
+
+  return {
+    /*products: Products.find({}).fetch(),*/
+    user: Meteor.user()
+  };
+}, MainLayout);
